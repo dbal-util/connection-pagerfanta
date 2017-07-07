@@ -1,0 +1,31 @@
+{
+    "name": "dbal-util/connection-pagerfanta",
+    "type": "library",
+    "description": "Trait and Methods to Query on a DBAL Connection and Return a PagerFanta Pager",
+    "keywords": ["dbal", "database", "persistence", "queryobject", "pagerfanta"],
+    "homepage": "https://github.com/dbal-util/connection-pagerfanta",
+    "license": "MIT",
+    "authors": [
+        {"name": "Jean-Bernard Addor", "email": "jean-bernard.addor@umontreal.ca"}
+    ],
+    "require": {
+        "php": ">=5.4",
+        "doctrine/dbal": "^2.0",
+        "pagerfanta/pagerfanta": "^1.0"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": { "DbalUtil\\Connection\\Pagerfanta": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.5.12.x-dev"
+        }
+    },
+    "archive": {
+        "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "build.xml", "build.properties", "composer.phar"]
+    }
+}
