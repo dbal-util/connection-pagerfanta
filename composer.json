@@ -6,7 +6,7 @@
     "homepage": "https://github.com/dbal-util/connection-pagerfanta",
     "license": "MIT",
     "authors": [
-        {"name": "Jean-Bernard Addor", "email": "jean-bernard.addor@umontreal.ca"}
+        {"name": "Jean-Bernard Addor"}
     ],
     "require": {
         "php": ">=5.4",
