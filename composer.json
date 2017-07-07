@@ -19,7 +19,7 @@
     "suggest": {
     },
     "autoload": {
-        "psr-4": { "DbalUtil\\Connection\\Pagerfanta": "" }
+        "psr-4": { "DbalUtil\\Connection\\Pagerfanta\\": "" }
     },
     "extra": {
         "branch-alias": {
