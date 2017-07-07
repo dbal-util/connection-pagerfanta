@@ -3,11 +3,9 @@
 namespace DbalUtil\Connection;
 
 use DbalUtil\Connection\ConnectionTrait;
-use Doctrine\DBAL\Driver\Connection;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
 use PagerfantaAdapters\Doctrine\DBAL\TwoModifiers;
-use Ramsey\Uuid\Uuid;
 
 
 trait PagedQueryTrait
