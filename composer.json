@@ -11,7 +11,8 @@
     "require": {
         "php": ">=5.4",
         "doctrine/dbal": "^2.0",
-        "pagerfanta/pagerfanta": "^1.0"
+        "pagerfanta/pagerfanta": "^1.0",
+        "pagerfanta-adapters/doctrine-dbal": "0.1.x-dev@dev"
     },
     "require-dev": {
     },
