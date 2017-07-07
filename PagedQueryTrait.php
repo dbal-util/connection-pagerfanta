@@ -2,7 +2,7 @@
 
 namespace DbalUtil\Connection\Pagerfanta;
 
-use DbalUtil\Connection\ConnectionTrait;
+use DbalUtil\Connection\ConnectionAbstractTrait;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
 use PagerfantaAdapters\Doctrine\DBAL\TwoModifiers;
@@ -10,7 +10,7 @@ use PagerfantaAdapters\Doctrine\DBAL\TwoModifiers;
 
 trait PagedQueryTrait
 {
-    use ConnectionTrait;
+    use ConnectionAbstractTrait;
 
     public function getManyToManyWherePager($base_table, $base_id,
         $link_base_id, $link_table, $link_distant_id,
