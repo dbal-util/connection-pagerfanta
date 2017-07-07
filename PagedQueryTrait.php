@@ -1,6 +1,6 @@
 <?php
 
-namespace DbalUtil\Connection;
+namespace DbalUtil\Connection\Pagerfanta;
 
 use DbalUtil\Connection\ConnectionTrait;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
