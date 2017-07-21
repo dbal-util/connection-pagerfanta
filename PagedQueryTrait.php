@@ -6,7 +6,7 @@ use DbalUtil\Connection\ConnectionAbstractTrait;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
-use PagerfantaAdapters\Doctrine\DBAL\TwoModifiers;
+use PagerfantaAdapters\Doctrine\DBAL\DoctrineDbal2ModifiersAdapter;
 
 
 trait PagedQueryTrait
@@ -34,7 +34,7 @@ trait PagedQueryTrait
                 ->setMaxResults(1);
         };
         
-        $adapter = new TwoModifiers($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
+        $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
         return new Pagerfanta($adapter);
     }
 
@@ -91,7 +91,7 @@ trait PagedQueryTrait
                   ->setMaxResults(1);
         };
         
-        $adapter = new TwoModifiers($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
+        $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
         return new Pagerfanta($adapter);
     }
 }
