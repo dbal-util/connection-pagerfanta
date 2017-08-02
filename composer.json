@@ -2,7 +2,7 @@
     "name": "dbal-util/connection-pagerfanta",
     "type": "library",
     "description": "Trait and Methods to Query on a DBAL Connection and Return a PagerFanta Pager",
-    "keywords": ["dbal", "database", "persistence", "queryobject", "pagerfanta"],
+    "keywords": ["dbal", "database", "persistence", "queryobject", "pagerfanta", "snowyowl"],
     "homepage": "https://github.com/dbal-util/connection-pagerfanta",
     "license": "MIT",
     "authors": [
