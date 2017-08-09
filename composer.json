@@ -1,5 +1,5 @@
 {
-    "name": "dbal-util/connection-pagerfanta",
+    "name": "doctrine-dbal-util/connection-pagerfanta",
     "type": "library",
     "description": "Trait and Methods to Query on a DBAL Connection and Return a PagerFanta Pager",
     "keywords": ["dbal", "database", "persistence", "queryobject", "pagerfanta", "snowyowl"],
@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "dbal-util/connection": "0.1.x-dev@dev",
+        "doctrine-dbal-util/connection": "0.1.x-dev@dev",
         "pagerfanta/pagerfanta": "^1.0",
         "pagerfanta-adapters/doctrine-dbal": "0.1.x-dev@dev"
     },
