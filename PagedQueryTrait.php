@@ -43,6 +43,7 @@ trait PagedQueryTrait
         };
 
         $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
+
         return new Pagerfanta($adapter);
     }
 
@@ -57,6 +58,7 @@ trait PagedQueryTrait
         };
 
         $adapter = new DoctrineDbalAdapter($queryBuilder, $countQueryBuilderModifier);
+
         return new Pagerfanta($adapter);
     }
 
@@ -74,6 +76,7 @@ trait PagedQueryTrait
         };
         
         $adapter = new DoctrineDbalAdapter($queryBuilder, $countQueryBuilderModifier);
+
         return new Pagerfanta($adapter);
     }
 
@@ -100,6 +103,7 @@ trait PagedQueryTrait
         };
         
         $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
+
         return new Pagerfanta($adapter);
     }
 }
