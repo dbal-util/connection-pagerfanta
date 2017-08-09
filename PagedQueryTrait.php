@@ -17,7 +17,6 @@ use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
 use PagerfantaAdapters\Doctrine\DBAL\DoctrineDbal2ModifiersAdapter;
 
-
 trait PagedQueryTrait
 {
     use ConnectionAbstractTrait;
@@ -36,13 +35,13 @@ trait PagedQueryTrait
                 $queryBuilder->orderBy($orderby, 'ASC');
             endif;
         };
-        
+
         $countQueryBuilderModifier = function (QueryBuilder $queryBuilder) {
             $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results') // ->orderBy(null) does not remove orderby
                 // ->groupBy('base.term') // suggested by Postgres error // TODO: Would it be only needed for counting?
                 ->setMaxResults(1);
         };
-        
+
         $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
         return new Pagerfanta($adapter);
     }
@@ -56,7 +55,7 @@ trait PagedQueryTrait
             $queryBuilder->select('COUNT(DISTINCT distant.uuid) AS total_results')
                   ->setMaxResults(1);
         };
-        
+
         $adapter = new DoctrineDbalAdapter($queryBuilder, $countQueryBuilderModifier);
         return new Pagerfanta($adapter);
     }
@@ -93,7 +92,7 @@ trait PagedQueryTrait
                 ->orderBy('count(base.uuid=taxo.owned_url_uuid)', 'ASC')
             ;
         };
-        
+
         $countQueryBuilderModifier = function (QueryBuilder $queryBuilder) { // TODO: a simplified query may improve performance!
             // $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results, count(base.uuid=taxo.owned_url_uuid) AS taxocount')
             $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results')
