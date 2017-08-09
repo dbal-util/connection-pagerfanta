@@ -24,7 +24,7 @@ trait PagedQueryTrait
 
     public function getManyToManyWherePager($base_table, $base_id,
         $link_base_id, $link_table, $link_distant_id,
-        $distant_id, $distant_table, array $where, $orderby='')
+        $distant_id, $distant_table, array $where, $orderby = '')
     // PageFanta dependency should be isolated!
     {
         $queryBuilder = $this->getManyToManyWhereQueryBuilder($base_table, $base_id, $link_base_id, $link_table, $link_distant_id, $distant_id, $distant_table, $where, $orderby);
@@ -32,14 +32,14 @@ trait PagedQueryTrait
         // TODO: do not make it twice...
 
         $finishQueryBuilderModifier = function (QueryBuilder $queryBuilder) use ($orderby) {
-            if ($orderby != ''):
+            if ($orderby !== ''):
                 $queryBuilder->orderBy($orderby, 'ASC');
             endif;
         };
         
         $countQueryBuilderModifier = function (QueryBuilder $queryBuilder) {
             $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results') // ->orderBy(null) does not remove orderby
-                // ->groupBy('base.term') // suggested by Postgres error // TODO: Would it be only needed for counting?            
+                // ->groupBy('base.term') // suggested by Postgres error // TODO: Would it be only needed for counting?
                 ->setMaxResults(1);
         };
         
@@ -65,8 +65,8 @@ trait PagedQueryTrait
     // PageFanta dependency should be isolated!
     {
         $queryBuilder = $this->getMoreManyToManyWhereQueryBuilder(
-            $more_table, $more_id, $base_more, $base_table, $base_id, 
-            $link_base_id, $link_table, $link_distant_id, $distant_id, 
+            $more_table, $more_id, $base_more, $base_table, $base_id,
+            $link_base_id, $link_table, $link_distant_id, $distant_id,
             $distant_table, $where);
 
         $countQueryBuilderModifier = function (QueryBuilder $queryBuilder) {
@@ -82,8 +82,8 @@ trait PagedQueryTrait
     // PageFanta dependency should be isolated!
     {
         $queryBuilder = $this->getUrlIndexQueryBuilder(
-            $more_table, $more_id, $base_more, $base_table, $base_id, 
-            $link_base_id, $link_table, $link_distant_id, $distant_id, 
+            $more_table, $more_id, $base_more, $base_table, $base_id,
+            $link_base_id, $link_table, $link_distant_id, $distant_id,
             $distant_table, $where);
 
         $finishQueryBuilderModifier = function (QueryBuilder $queryBuilder) {
