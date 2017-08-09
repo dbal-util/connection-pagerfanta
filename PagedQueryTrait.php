@@ -74,7 +74,7 @@ trait PagedQueryTrait
             $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results')
                   ->setMaxResults(1);
         };
-        
+
         $adapter = new DoctrineDbalAdapter($queryBuilder, $countQueryBuilderModifier);
 
         return new Pagerfanta($adapter);
@@ -101,7 +101,7 @@ trait PagedQueryTrait
             $queryBuilder->select('COUNT(DISTINCT base.uuid) AS total_results')
                   ->setMaxResults(1);
         };
-        
+
         $adapter = new DoctrineDbal2ModifiersAdapter($queryBuilder, $finishQueryBuilderModifier, $countQueryBuilderModifier);
 
         return new Pagerfanta($adapter);
