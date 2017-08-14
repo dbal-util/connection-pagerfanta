@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Trait and Methods to Query on a DBAL Connection and Return a PagerFanta Pager",
     "keywords": ["dbal", "database", "persistence", "queryobject", "pagerfanta", "snowyowl"],
-    "homepage": "https://github.com/dbal-util/connection-pagerfanta",
+    "homepage": "https://github.com/doctrine-dbal-util/connection-pagerfanta",
     "license": "MIT",
     "authors": [
         {"name": "Jean-Bernard Addor"}
@@ -18,7 +18,7 @@
     "suggest": {
     },
     "autoload": {
-        "psr-4": { "DbalUtil\\Connection\\Pagerfanta\\": "" }
+        "psr-4": { "DoctrineDbalUtil\\Connection\\Pagerfanta\\": "" }
     },
     "extra": {
         "branch-alias": {
