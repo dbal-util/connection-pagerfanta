@@ -11,8 +11,8 @@
 
 namespace DoctrineDbalUtil\Connection\Pagerfanta;
 
-use DoctrineDbalUtil\Connection\ConnectionAbstractTrait;
 use Doctrine\DBAL\Query\QueryBuilder;
+use DoctrineDbalUtil\Connection\ConnectionAbstractTrait;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
 use PagerfantaAdapters\Doctrine\DBAL\DoctrineDbal2ModifiersAdapter;
