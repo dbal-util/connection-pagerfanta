@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace DbalUtil\Connection\Pagerfanta;
+namespace DoctrineDbalUtil\Connection\Pagerfanta;
 
-use DbalUtil\Connection\ConnectionAbstractTrait;
+use DoctrineDbalUtil\Connection\ConnectionAbstractTrait;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Pagerfanta\Adapter\DoctrineDbalAdapter;
 use Pagerfanta\Pagerfanta;
