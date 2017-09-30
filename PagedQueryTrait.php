@@ -31,7 +31,7 @@ trait PagedQueryTrait
         // TODO: do not make it twice...
 
         $finishQueryBuilderModifier = function (QueryBuilder $queryBuilder) use ($orderby) {
-            if ($orderby !== ''):
+            if ('' !== $orderby):
                 $queryBuilder->orderBy($orderby, 'ASC');
             endif;
         };
