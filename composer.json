@@ -10,7 +10,7 @@
     ],
     "require": {
         "doctrine-dbal-util/connection": "0.1.x-dev@dev",
-        "pagerfanta/pagerfanta": "^1.0",
+        "pagerfanta/pagerfanta": "^1.0 || ^2.0",
         "pagerfanta-adapters/doctrine-dbal": "0.1.x-dev@dev"
     },
     "require-dev": {
